@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+    <title>Match-Match</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <script src="scripts/script.js"></script>
+</head>
+<body class="background">
+        <header>
+            <h1 class="centered">Match-Match Game</h1>
+            <h2 id="slogan" class="centered invisible">find the other half.</h2> 
+        </header>
+        <main>
+            <div id="background" class="blue start_page">
+            <div class="options-container">
+                <div id="clock_field" class="invisible clock">0:0</div>
+                <h3 class="centered" id="welcome">Hi, what is your name?</h3>
+                <form id="collapsable" name="auth" method="POST" onsubmit="validate(); return false;">
+                    <div class="centered">
+                        <input id="username" name="username" type="text"><br>
+                        <p class="variant">Difficulty:</p>
+                        <div class="choice">
+                            <input type="radio" id="difficultyChoice1" name="level" value="5" checked>
+                            <label class="variant" for="level1">Easy</label>
+                            <input class="variant" type="radio" id="difficultyChoice2" name="level" value="10">
+                            <label class="variant" for="level2">Not so easy</label>
+                            <input class="variant" class="variant" type="radio" id="difficultyChoice3" name="level" value="15">
+                            <label class="variant" for="level3">Hard</label>
+                        </div>
+                        <button type="submit">Let's roll!</button>
+                    </div>
+                </form>
+                <button class="invisible small" onclick="loadGamePage(); return false;" id="start_button">New game</button>
+                </div>
+                <div id="field" class="playfield"></div>
+            </div>
+            <div id="winner_banner" class="invisible"></div>
+        </main>
+</body>
+</html>

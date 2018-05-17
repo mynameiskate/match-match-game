@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+body, html {
+	height: 100%;
+	margin: 0 auto;
+}
+
+body {
+	font-family: 'Mina';
+    color: 	#DB7093;
+    font-size: 35px;
+    text-align: center;
+}
+
+.background {
+	background-image: url(../img/cinema.jpg);
+    height: 100%; 
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 4.5vw;
+    max-height: 50px;
+}
+
+h2 {
+    font-size: 3.5vw;
+    color: 	#85274e;
+    display: inline-block;
+}
+
+h3 {
+	font-size: 2.5vw;
+	padding-bottom: 2%;
+}
+
+.playfield {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 7%;
+}
+
+.card{
+    width: 185px;
+    height: 195px;
+    background-color: rgb(73, 36, 70);
+}
+
+img.card {
+	width: 100%;
+	opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.flipped {
+    transform: rotatey(-180deg); 
+    transition: 1s;
+  	box-shadow: 3px 3px 4px 5px #FFF; 
+}
+
+.flipped img{
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.returned {
+	transition: 1s;
+}
+
+.matched {
+	visibility: hidden;
+}
+
+.expand { transition: height .5s }
+
+.invisible {
+	display: none;
+}
+
+.start_page {
+    position: fixed;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+ /*   background-color: rgba(25, 25, 112, 0.7); */
+    visibility: visible;
+    margin: auto;
+}
+
+.blue {
+	background-color: rgba(25, 25, 112, 0.7);
+}
+
+button.small {
+	max-width: 100px;
+	height: 50px;
+}
+
+.playfield > div{
+    display: inline-block;
+	width: 185px;
+	height: 195px;
+	margin:10px;
+	font-size:64px;
+	cursor:pointer;
+    text-align:center;
+    background-color: #85274e;
+}
+
+.centered {
+    text-align: center;
+    margin: 1.5vw 0 0 0;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.clock {
+    margin: 10px; 
+    color:white; 
+    font: 20px; 
+    text-align:center;
+    min-width: 100px;
+}
+
+input {
+	border-radius: 5px;
+    margin: 10px;
+    max-height: 50px;
+    max-width: 160px;
+    border: none;
+    font-size: 2vw;
+    font-family: 'Mina', cursive;
+}
+
+label.variant {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+button {
+	background-color: #DB7093;
+	border-radius: 5px;
+    margin: 10px;
+    height: 50px;
+    width: 50%;
+    border: none;
+    font-size: 0.5em;
+}
+
+button:hover {
+    text-shadow: rgba(255, 255, 255, 0.815) 0 0 10px;
+}
+
+.choice {
+	display:flex;
+	justify-content: space-around;
+}
+
+.options-container{
+	display:flex;
+	justify-content: space-between;
+}
